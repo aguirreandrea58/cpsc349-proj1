@@ -1,0 +1,46 @@
+---
+title: Home
+pagination:
+    data: photos.z5wutri.media
+    size: 80
+
+layout: base
+---
+<!DOCTYPE html>
+<html lang="en">
+<title> Sunrise Pictures </title>
+
+<header>
+    <h1 style="font-size:40px;color:orange;"> Sunrise Pictures.</h1>
+    <h2></h2>
+
+</header>
+
+
+
+
+<body>
+    <p>Our website will display a viriety of sunrise pictures,
+        displaying an array of colors</p>
+
+        <img src=" ">
+	<br>
+	<br>
+	<a href="photospaged/">Site Page</a>
+	<br>
+        {% for photo in pagination.items -%}
+	<a href=""><img src={{ photo.src.tiny }}></a>
+        {% endfor -%}
+
+    <hr>
+</body>
+
+<footer>
+
+    <p>
+        <small>
+            <a href="https://www.pexels.com">Photos provided by Pexels</a>
+        </small>
+    </p>
+</footer>
+</html>

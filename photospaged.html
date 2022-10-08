@@ -1,0 +1,18 @@
+---
+title: Photos Paged
+pagination:
+    data: photos.z5wutri.media
+    size: 1
+    alias: photoselection
+    permalink: "photopage/{{ photoselection | slug }}/index.html"
+---
+<!DOCTYPE html>
+<html>
+	<body>
+		<h1>{{ title }}</h1>
+		{% for photo in pagination.items -%}
+		<img src={{ photo.src.original }}>
+		{% endfor -%}
+	</body>
+</html>
+
