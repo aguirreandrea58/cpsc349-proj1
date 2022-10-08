@@ -22,16 +22,19 @@ layout: base
 <body>
     <p>Our website will display a viriety of sunrise pictures,
         displaying an array of colors</p>
+	<br>
+	<br>
+	<br>
 
-        <img src=" ">
-	<br>
-	<br>
-	<a href="photospaged/">Site Page</a>
-	<br>
-        {% for photo in pagination.items -%}
-	<a href=""><img src={{ photo.src.tiny }}></a>
+	{% for photo in pagination.items -%}
+	<a href="photo_page/page-{{ pagination.pageNumber }}/index.html"><img src={{ photo.src.tiny }}></a>
         {% endfor -%}
 
+	<br>
+	<br>
+	<a href="photo_page/page-0/index.html">test link</a>
+
+	
     <hr>
 </body>
 
