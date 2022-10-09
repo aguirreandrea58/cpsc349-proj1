@@ -16,25 +16,18 @@ layout: base
 
 </header>
 
-
-
-
 <body>
     <p>Our website will display a viriety of sunrise pictures,
         displaying an array of colors</p>
-
-        <img src=" ">
 	<br>
 	<br>
-	<a href="photospaged/">Site Page</a>
-	<br>
-        {% for photo in pagination.items -%}
-	<a href=""><img src={{ photo.src.tiny }}></a>
+	{% for photo in pagination.items -%}
+	<a href="photo_page/page-{{ forloop.index0 }}/index.html"><img src={{ photo.src.tiny }}></a>
         {% endfor -%}
-    <br>
+   <br>
+   <br>
 
     <a href="aboutUs.html">About Us</a>
-
     <hr>
 </body>
 
