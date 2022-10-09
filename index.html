@@ -31,7 +31,7 @@ layout: base
 	<p>Click on an image to go to the photo page and see more information.</p>
 	<br>
 	{% for photo in pagination.items -%}
-	<a href="photo_page/page-{{ forloop.index0 }}/index.html"><img src={{ photo.src.tiny }}></a>
+	<a href="photo_page/page-{{ forloop.index0 }}/index.html"><img src="{{ photo.src.tiny }}"></a>
         {% endfor -%}
 	<br>
 	<br>
