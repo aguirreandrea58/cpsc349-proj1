@@ -8,11 +8,26 @@ permalink: "photo_page/page-{{ pagination.pageNumber }}/index.html"
 ---
 <!DOCTYPE html>
 <html>
+	{% for photo in pagination.items -%}
+                <style>
+			body {background-color:{{ photo.avg_color }};}
+                </style>
+	{% endfor -%}
+
 	<body>
-		<h1>{{ title }}</h1>
+		<a href="../../index.html">Home Page</a>
+		<br>
+		<br>
 		{% for photo in pagination.items -%}
-		<img src={{ photo.src.original }}>
+		<h1>Photo Info</h1>
+		<img src={{ photo.src.large }}>
+		<br>
+		<h2>{{ photo.alt }}</h2>
+		</p>Photographer: {{ photo.photographer }} 
+		<br>
+		Photographer's Website: {{photo.photographer_url }}</p>
 		{% endfor -%}
+		
 	</body>
 </html>
 

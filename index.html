@@ -11,21 +11,34 @@ layout: base
 <title> Sunrise Pictures </title>
 
 <header>
-    <h1 style="font-size:40px;color:orange;"> Sunrise Pictures.</h1>
-    <h2></h2>
+    <h1 style="font-size:40px;color:orange;"> Sunrise Pictures</h1>
 
 </header>
 
 <body>
-    <p>Our website will display a viriety of sunrise pictures,
-        displaying an array of colors</p>
+    <h2>Our website will display a variety of sunrise pictures,
+        displaying an array of colors</h2>
+
+
+    <br>
+    <h3>Navigation</h3>
+    <a href="#AboutUs">About Us Link</a>
+    <br>
+    <a href="#PexelsLink">Pexels Acknowledgement</a>
 	<br>
+	<br>
+	<br>
+	<p>Click on an image to go to the photo page and see more information.</p>
 	<br>
 	{% for photo in pagination.items -%}
 	<a href="photo_page/page-{{ forloop.index0 }}/index.html"><img src={{ photo.src.tiny }}></a>
         {% endfor -%}
 	<br>
-	<br>	
+	<br>
+
+	<a id="AboutUs" href="aboutUs.html"><h3>About Us</h3></a>
+
+
     <hr>
 </body>
 
@@ -33,7 +46,7 @@ layout: base
 
     <p>
         <small>
-            <a href="https://www.pexels.com">Photos provided by Pexels</a>
+            <a id="PexelsLink" href="https://www.pexels.com">Photos provided by Pexels</a>
         </small>
     </p>
 </footer>
