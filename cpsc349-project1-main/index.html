@@ -1,10 +1,6 @@
 ---
-title: Home
-pagination:
-    data: photos.z5wutri.media
-    size: 80
-
 layout: base
+title: Home
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -16,27 +12,21 @@ layout: base
 
 </header>
 
+
+
+
 <body>
+<footer>
     <p>Our website will display a viriety of sunrise pictures,
         displaying an array of colors</p>
-	<br>
-	<br>
-	{% for photo in pagination.items -%}
-	<a href="photo_page/page-{{ forloop.index0 }}/index.html"><img src={{ photo.src.tiny }}></a>
-        {% endfor -%}
-   <br>
-   <br>
 
-    <a href="aboutUs.html">About Us</a>
+        <img src=" ">
     <hr>
-</body>
-
-<footer>
-
     <p>
         <small>
             <a href="https://www.pexels.com">Photos provided by Pexels</a>
         </small>
     </p>
 </footer>
+</body>
 </html>
